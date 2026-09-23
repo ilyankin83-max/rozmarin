@@ -1,6 +1,7 @@
-.rm-kitchen{--rk-ink:#062f2d;--rk-bg:#eeebe4;--rk-gold:#dcc15f;display:grid;grid-template-columns:1.05fr 1fr;width:100%;background:var(--rk-bg);color:var(--rk-ink);font-family:Arial,Helvetica,sans-serif;line-height:1.4}
+.rm-kitchen{--rk-ink:#062f2d;--rk-bg:#eeebe4;--rk-gold:#dcc15f;width:100%;background:var(--rk-bg);color:var(--rk-ink);font-family:Arial,Helvetica,sans-serif;line-height:1.4}
 .rm-kitchen,.rm-kitchen *{box-sizing:border-box}
-.rm-kitchen__content{padding:clamp(32px,5vw,72px);align-self:center;min-width:0}
+.rm-kitchen__container{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);width:calc(100% - 80px);max-width:1440px;margin-inline:auto}
+.rm-kitchen__content{padding:clamp(32px,5vw,72px) clamp(28px,4vw,64px) clamp(32px,5vw,72px) 0;align-self:center;min-width:0}
 .rm-kitchen__eyebrow{margin:0 0 24px;font-size:13px;font-weight:400;letter-spacing:.19em;text-transform:uppercase}
 .rm-kitchen__title{margin:0;font-size:clamp(30px,3.2vw,52px);font-weight:700;line-height:1.08;letter-spacing:-.025em;max-width:620px;color:var(--rk-ink)}
 .rm-kitchen__text{margin:28px 0 32px;max-width:510px;font-size:clamp(17px,1.65vw,22px);line-height:1.5;color:#344446}
@@ -11,8 +12,10 @@
 .rm-kitchen__visual{position:relative;min-height:460px;overflow:hidden;background:#c3b197}
 .rm-kitchen__image{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 @media(hover:hover){.rm-kitchen__button:hover{background:#e5cd77}}
-@media(max-width:1050px) and (min-width:761px){.rm-kitchen__content{padding:32px}.rm-kitchen__button{padding:16px 20px;font-size:15px;gap:16px}.rm-kitchen__visual{min-height:440px}}
-@media(max-width:760px){.rm-kitchen{grid-template-columns:minmax(0,1fr)}.rm-kitchen__visual{grid-row:1;min-height:0;aspect-ratio:1.5}.rm-kitchen__image{object-position:center 55%}.rm-kitchen__content{padding:28px 24px 30px}.rm-kitchen__eyebrow{font-size:11px;margin-bottom:18px}.rm-kitchen__title{font-size:clamp(28px,6.7vw,40px);max-width:510px}.rm-kitchen__text{font-size:17px;margin:20px 0 28px}.rm-kitchen__button{width:100%;padding:17px 20px;font-size:15px;gap:12px}.rm-kitchen__note{margin-top:16px;font-size:12px}}
+@media(max-width:1050px) and (min-width:761px){.rm-kitchen__content{padding:32px 28px 32px 0}.rm-kitchen__button{padding:16px 20px;font-size:15px;gap:16px}.rm-kitchen__visual{min-height:440px}}
+@media(max-width:1000px){.rm-kitchen__container{width:calc(100% - 48px)}}
+@media(max-width:540px){.rm-kitchen__container{width:calc(100% - 32px)}}
+@media(max-width:760px){.rm-kitchen__container{grid-template-columns:minmax(0,1fr)}.rm-kitchen__visual{grid-row:1;min-height:0;aspect-ratio:1.5}.rm-kitchen__image{object-position:center 55%}.rm-kitchen__content{padding:28px 0 30px}.rm-kitchen__eyebrow{font-size:11px;margin-bottom:18px}.rm-kitchen__title{font-size:clamp(28px,6.7vw,40px);max-width:510px}.rm-kitchen__text{font-size:17px;margin:20px 0 28px}.rm-kitchen__button{width:100%;padding:17px 20px;font-size:15px;gap:12px}.rm-kitchen__note{margin-top:16px;font-size:12px}}
 @media(prefers-reduced-motion:reduce){.rm-kitchen__button{transition:none}}
 /* Optional native dialog; only applies to this block's popup. */
 .rm-kitchen-dialog{box-sizing:border-box;width:min(720px,calc(100% - 32px));max-height:calc(100dvh - 32px);padding:32px;border:0;background:#eeebe4;color:#062f2d;font:16px/1.5 Arial,Helvetica,sans-serif;overflow:auto}
